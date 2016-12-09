@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+// Fibbonocci Sequence adding only even numbers below 4 million!
+	// var belowFourMil = true;
+	// var a = 1;
+	// var b = 2;
+	// var sum = 0;
+	// var temp = 0;
+
+	// while(belowFourMil){
+	// 	temp = a + b; //this is the 3rd or new number
+	// 	a = b; //set previous to recent
+	// 	b = temp; // set recent to new number
+	// 	// Check if temp is divisible by 2
+	// 	if(temp % 2 === 0){
+	// 		sum += temp;
+	// 	}
+	// 	if(temp > 4000000){
+	// 		belowFourMil = false;
+	// 	}
+	// }
+	// console.log(sum);
+	
+	// var today = new Date(year, month);
+	// console.log(today);
+	// var dayOfWeek = today.getDay();
+	// console.log(dayOfWeek);
+	// var dayOfMonth = today.getDate();
+	// console.log(dayOfMonth);
+
+
+
+	// Find all Friday the 13ths in any given year!
+
+	// var sum = 0;
+	// var year = 1901;
+	// for(var i = 0; i < 12; i++){
+	// 	var targetDate = new Date(year, i, 13);
+	// 	if(targetDate.getDay() == 5){
+	// 		sum++;
+	// 	}
+	// }
+	// console.log(sum);
+	
+
+
+	// Find the Sunday first of the month in the 20th century!
+
+	// var sum = 0;
+	// var year = 1901;
+	// for(var i = 1901; i < 2000; i++){
+	// 	for(var j = 0; j < 12; j++){
+	// 		var targetDate = new Date(i, j, 0);
+	// 		if(targetDate.getDay() == 0){
+	// 			sum++;
+	// 		}
+	// 	}
+	// }
+	// console.log(sum);
+	// ??171??
+
+	var myLeetArray = 
+	[
+		'4',
+		'8',
+		'(',
+		'|)',
+		'3',
+		'|=',
+		'6',
+		'|-|',
+		'][',
+		'_|',
+		'|<',
+		'|_',
+		'|\/|',
+		'|\|',
+		'()',
+		'|2',
+		'(,)',
+		'|Z',
+		'5',
+		"']['",
+		'|_|',
+		'\/',
+		'\/\/',
+		'><',
+		'`/',
+		'2',
+		' '
+	];
+
+	var myArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' '];
+
+	var myString = "This is sample text".toUpperCase();
+	
+	var myStringArray = myString.split("");
+	var finalLeetArray = [];
+	console.log(myStringArray);
+
+	for(i = 0; i < myString.length; i++){
+		for (var j = 0; j < myArray.length; j++) {
+			if(myStringArray[i] == myArray[j]){
+				myStringArray[i] = myLeetArray[j];
+				console.log(myLeetArray[j]);
+				finalLeetArray.push(myLeetArray[j]);
+			}
+		}
+	}
+	var finalLeet = finalLeetArray.join("");
+	console.log(finalLeetArray);
+	console.log(finalLeet);
+
+	// console.log(myArray);
+	// console.log(myStringArray);
+
+
+	
+
+
+</script>
+
+
+
+
+</body>
