@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+var sum = 0;
+function help( i) { 
+   for (let j = 2; j < i; j++) {
+      if (i % j == 0) {
+        sum = sum;
+      }
+      else {
+        sum += j;
+      }
+    }
+} 
+document.write(sum);
+
+function getPrime(n){
+	var prime = 0; //We will stash all our prime numbers here.
+	var i = 17; //start checking prime at 3
+	for(let i = 0; i < j; ){
+		var isPrime = true; //Assume the number is prime until we find otherwise
+	    for(var j = 0; j < 200000; j++){//Divide the current number by every known prime.
+	    	var iByJ = i % j == 0;
+	        if(iByJ == 0){
+	           	//this thing is not prime. We know, because it divded evenly into something
+	       		isPrime = false; //update the boolean
+	       		break; //dont waste any time looking for more. its not prime. leave the loop.
+	       	}else if(isPrime){
+	       		prime += j;
+	    	}
+	    }
+	    i++;
+	}
+	console.log(prime);
+}
+
+console.time('countPrimes');
+countPrimes(20000);
+console.timeEnd('countPrimes');
+
+
+function countPrimes(num) {
+
+    var knownPrimes = [2,3,5];
+    var sum = 0;
+
+    for (var i = 6; i < num; i++) {
+        for (var j = 0; j < knownPrimes.length; j++) {
+
+            if (i % knownPrimes[j] == 0) {
+                break;
+            }
+            if ((j == (knownPrimes.length - 1) ) && (i % knownPrimes[j] != 0)) {
+                knownPrimes.push(i);
+            }    
+        }
+    }
+
+
+    sum = knownPrimes.reduce(function(a,b){
+        return a + b;
+    },0);
+
+    console.log(sum);
+
+}
+
+document.write(getPrime(2000));
+
+
+
+
+var number = prompt("Enter a number between 1 and 10");
+for(let i = 0; i < array.length; i++){
+	if(number == array[i]){
+		alert("your number is " + i);
+	}
+}
+var array = [1,2,3,4,5,6,7,8,9,10];
+
+// Big O of 1
+function oOne(array){
+	return array[0];
+}
+
+oOne(array);
+
+
+function oNSquared(n){
+	for(let i = 0; i < n; i++){
+		for(let j = 0; j < n; j++){
+			for(let k = 0; k < n; k++){
+				console.log(k);
+			}
+		}
+	}
+}
+
+</script>
+
+</body>
+</html>
