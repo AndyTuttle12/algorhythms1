@@ -30,3 +30,5 @@ function caseConvert (string, conversionType){
 }
 
 caseConvert("Blah bLAH blaH blah Blah", "snakecase");
+
+
