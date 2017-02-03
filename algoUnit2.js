@@ -21,7 +21,7 @@ function caseConvert (string, conversionType){
     var lastWord = stringToArray[stringToArray.length-1];
     console.log(lastWord);
     for(let i = 0; i < stringToArray.length-1; i++){
-      var strings = stringToArray[i] + '-';
+      var strings = stringToArray[i] + '_';
       convStr += strings;
     }
     convStr += lastWord;
